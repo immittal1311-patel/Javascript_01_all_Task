@@ -1,9 +1,18 @@
-let password="js@123"
-let att=0
+
+
+let enterpassword=""
+let attempts=0
 let maxatt=3
+let password="js@123"
 
 do{
-    if(password=="js@123"){
+
+    enterpassword=password[attempts];
+    attempts++
+
+    console.log("Attempt" +attempts+":"+enterpassword);
+    
+    if(enterpassword===password){
         console.log("Login  Successful");
         break;
         
@@ -13,9 +22,7 @@ do{
         
     }
 
-}while(att<maxatt){
+}while(attempts<maxatt)
 
-    if(password){
-
-    }
-}
+    console.log("Total Attempts used:"+attempts);
+    
